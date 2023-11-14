@@ -130,3 +130,23 @@ No de habitación: 222
 Nombres y apellidos del paciente: as as
 Fecha de la alerta: 2023-11-14 00:19:50
 Puntuación: 3
+No de habitación: 112
+Nombres y apellidos del paciente: ff ee
+Fecha de la alerta: 2023-11-14 00:44:07
+Puntuación: 3
+No de habitación: 112
+Nombres y apellidos del paciente: ff ee
+Fecha de la alerta: 2023-11-14 00:44:15
+Puntuación: 4
+No de habitación: 112
+Nombres y apellidos del paciente: ff ee
+Fecha de la alerta: 2023-11-14 00:44:23
+Puntuación: 4
+No de habitación: 112
+Nombres y apellidos del paciente: ff ee
+Fecha de la alerta: 2023-11-14 00:44:31
+Puntuación: 4
+No de habitación: 112
+Nombres y apellidos del paciente: ff ee
+Fecha de la alerta: 2023-11-14 00:44:39
+Puntuación: 5

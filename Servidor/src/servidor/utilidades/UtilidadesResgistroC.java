@@ -1,11 +1,10 @@
-package cliente.utilidades;
+
+package servidor.utilidades;
 
 import java.rmi.Naming;
 import java.rmi.Remote;
 
-public class UtilidadesRegistroC
-{   
-    
+public class UtilidadesResgistroC {
     public static Remote obtenerObjRemoto(String dirIP,int puerto, String nameObjReg)
     {
         String URLRegistro;
@@ -20,5 +19,4 @@ public class UtilidadesRegistroC
             return null;
         }
     }
-    
 }

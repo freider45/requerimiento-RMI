@@ -17,14 +17,13 @@ public class ControladorGestorPacientesImpl
         implements ControladorGestorPacientesInt{
     
    private final PacienteRepositoryInt objRepositorio;
-   private final ControladorGestorEquiposNotificacionImpl objRemotoGestionEquiposNotificacion;
+   //private final ControladorGestorEquiposNotificacionImpl objRemotoGestionEquiposNotificacion;
 
-    public ControladorGestorPacientesImpl(PacienteRepositoryInt objRepositorio,
-                    ControladorGestorEquiposNotificacionImpl objRemotoGestionEquiposNotificacion) throws RemoteException {
+    public ControladorGestorPacientesImpl(PacienteRepositoryInt objRepositorio) throws RemoteException {
         super();//llamando al constructor de la clase padre, 
         //asignando un puerto de escucha al objeto remoto
         this.objRepositorio=objRepositorio;
-        this.objRemotoGestionEquiposNotificacion = objRemotoGestionEquiposNotificacion;
+        //this.objRemotoGestionEquiposNotificacion = objRemotoGestionEquiposNotificacion;
     }
 
     @Override
