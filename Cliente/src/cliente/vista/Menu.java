@@ -106,12 +106,12 @@ public class Menu {
     {	
         try
         {
-            boolean enviar;
+    
             if(objSensoresDTO.getPaciente() != null){
                 while(terminar > 0){
                     lecturaSensores(objSensoresDTO);
-                    enviar = this.objRemoto.enviarLecturaSensores(objSensoresDTO);
-                    if(!enviar){
+                  SensoresDTO  enviar = this.objRemoto.enviarLecturaSensores(objSensoresDTO);
+                    if(enviar!=null){
                         System.out.println("\nFallo en el envio de información");
                         terminar = 0;
                     }

@@ -15,7 +15,7 @@ import servidor.DTO.UsuarioDTO;
 public interface ControladorGestorPacientesInt extends Remote
 {
     //Definición del segundo metodo remoto
-    public boolean enviarLecturaSensores(SensoresDTO objSensores) throws RemoteException;
+    public SensoresDTO enviarLecturaSensores(SensoresDTO objSensores) throws RemoteException;
     //cada definición del método debe especificar que puede lanzar la excepción java.rmi.RemoteException
 }
 
