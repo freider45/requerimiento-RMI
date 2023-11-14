@@ -22,15 +22,15 @@ public class ControladorGestorPacientesImpl
         this.objRemotoGestionEquiposNotificacion = objRemotoGestionEquiposNotificacion;
     }
   
-
     @Override
-    public UsuarioDTO registrarPaciente(UsuarioDTO objPaciente) throws RemoteException {
-       objRemotoGestionEquiposNotificacion.notificarEquiposSobreNuevoRegistroPaciente(objPaciente);
-        return this.objRepositorio.registrarPaciente(objPaciente); 
-    }
-    
-    @Override
-    public boolean enviarLecturaSensores(SensoresDTO objSensoresDTO) throws RemoteException{
+    public boolean recibirLecturaSensores(SensoresDTO objSensoresDTO) throws RemoteException{
+        System.out.println("\nLecturas de sensores recibidas..\n");
+        System.out.println("\nFrecuencia cardiaca: "+objSensoresDTO.getFrecuenciaCardiaca());
+        System.out.println("\nFrecuencia respiratoria: "+objSensoresDTO.getFrecuenciaRespiratoria());
+        System.out.println("\nPresión arterial: "+objSensoresDTO.getTensionArterialSistolica()+"/"+
+                objSensoresDTO.getTensionArterialDiastolica());
+        System.out.println("\nSaturación de oxígeno: "+objSensoresDTO.getSaturacionOxigeno());
+        System.out.println("\nTempertatura: "+objSensoresDTO.getTemperatura());
         return true;
     }
 

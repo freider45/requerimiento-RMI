@@ -53,65 +53,53 @@ public class Menu {
 
     private void Opcion1() 
     {
-        try
-        {
-            String nombres, apellidos, unidad;
-            int noHabitacion;
-            float edad;
-            System.out.println("\n============Registro del paciente==============");
-            //Captura y validación del número de habitación
-            do{
-                System.out.println("\nDigite el número de habitación: ");
-                noHabitacion=UtilidadesConsola.leerEntero();
-                if(noHabitacion <100 || noHabitacion > 999){
-                    System.out.println("\nEl número de la habitación debe estar entre 100 y 999");
-                }
-            }while(noHabitacion < 100 || noHabitacion > 999);
-            //Captura de los nombres del paciente
-            System.out.println("\nDigite los nombres: ");
-            nombres=UtilidadesConsola.leerCadena("nombres");
-            //Captura de los apellidos del paciente
-            System.out.println("\nDigite los apellidos: ");
-            apellidos=UtilidadesConsola.leerCadena("apellidos");
-            //Captura y validación de la edad del paciente
-            do{
-                System.out.println("\nDigite la edad del paciente: ");
-                edad = UtilidadesConsola.leerEntero();
-                System.out.println("\nDigite la unidad de la edad (dias, meses, años): ");
-                unidad = UtilidadesConsola.leerCadena("unidad");
-                if(edad < 1){
-                    System.out.println("\nLa edad debe ser mayor a 0");
-                }else{
-                    switch (unidad.toLowerCase()) {
-                        case "dias":
+        String nombres, apellidos, unidad;
+        int noHabitacion;
+        float edad;
+        System.out.println("\n============Registro del paciente==============");
+        //Captura y validación del número de habitación
+        do{
+            System.out.println("\nDigite el número de habitación: ");
+            noHabitacion=UtilidadesConsola.leerEntero();
+            if(noHabitacion <100 || noHabitacion > 999){
+                System.out.println("\nEl número de la habitación debe estar entre 100 y 999");
+            }
+        }while(noHabitacion < 100 || noHabitacion > 999);
+        //Captura de los nombres del paciente
+        System.out.println("\nDigite los nombres: ");
+        nombres=UtilidadesConsola.leerCadena("nombres");
+        //Captura de los apellidos del paciente
+        System.out.println("\nDigite los apellidos: ");
+        apellidos=UtilidadesConsola.leerCadena("apellidos");
+        //Captura y validación de la edad del paciente
+        do{
+            System.out.println("\nDigite la edad del paciente: ");
+            edad = UtilidadesConsola.leerEntero();
+            System.out.println("\nDigite la unidad de la edad (dias, meses, años): ");
+            unidad = UtilidadesConsola.leerCadena("unidad");
+            if(edad < 1){
+                System.out.println("\nLa edad debe ser mayor a 0");
+            }else{
+                switch (unidad.toLowerCase()) {
+                    case "dias":
 
-                            break;
-                        case "meses":
-                            edad *= 30;
-                            break;
-                        case "años":
-                            edad *= 365;
-                            break;
-                        default:
-                            edad = -1;
-                            System.out.println("\nLa unidad debe ser (días, meses o años)");
-                    }
+                        break;
+                    case "meses":
+                        edad *= 30;
+                        break;
+                    case "años":
+                        edad *= 365;
+                        break;
+                    default:
+                        edad = -1;
+                        System.out.println("\nLa unidad debe ser (días, meses o años)");
                 }
-            }while(edad < 0);
-            //Creación del paciente
-            UsuarioDTO objPaciente = new UsuarioDTO(noHabitacion, nombres, apellidos, edad);
-            objSensoresDTO.setPaciente(objPaciente);
-            UsuarioDTO bandera= this.objRemoto.registrarPaciente(objSensoresDTO.getPaciente());
-
-            if(bandera!=null)
-                System.out.println("\nRegistro realizado satisfactoriamente...");
-            else
-                System.out.println("\nno se pudo realizar el registro...");
-        }
-        catch(RemoteException e)
-        {
-            System.out.println("La operacion no se pudo completar, intente nuevamente...");
-        }
+            }
+        }while(edad < 0);
+        //Creación del paciente
+        UsuarioDTO objPaciente = new UsuarioDTO(noHabitacion, nombres, apellidos, edad);
+        objSensoresDTO.setPaciente(objPaciente);
+        System.out.println("\nRegistro realizado satisfactoriamente...");
     }
 
     private void Opcion2()
@@ -119,22 +107,21 @@ public class Menu {
         try
         {
             boolean enviar;
-            if(objSensoresDTO.getPaciente().getNoHabitacion() != 0){
+            if(objSensoresDTO.getPaciente() != null){
                 while(terminar > 0){
                     lecturaSensores(objSensoresDTO);
                     enviar = this.objRemoto.enviarLecturaSensores(objSensoresDTO);
                     if(!enviar){
-                        System.out.println("Fallo en el envio de información");
+                        System.out.println("\nFallo en el envio de información");
                         terminar = 0;
                     }
-                    
-                    System.out.println("\nEnviando indicadores..\n");
+                    System.out.println("\n\nEnviando indicadores..");
                     System.out.println("\nFrecuencia cardiaca: "+objSensoresDTO.getFrecuenciaCardiaca());
                     System.out.println("\nFrecuencia respiratoria: "+objSensoresDTO.getFrecuenciaRespiratoria());
                     System.out.println("\nPresión arterial: "+objSensoresDTO.getTensionArterialSistolica()+"/"+
                             objSensoresDTO.getTensionArterialDiastolica());
                     System.out.println("\nSaturación de oxígeno: "+objSensoresDTO.getSaturacionOxigeno());
-                    System.out.println("\nTempertatura: %.2f"+objSensoresDTO.getTemperatura());
+                    System.out.println("\nTempertatura: "+objSensoresDTO.getTemperatura());
                     try {
                         TimeUnit.SECONDS.sleep(8);
                     } catch (InterruptedException e) {
@@ -147,8 +134,8 @@ public class Menu {
         }
         catch(RemoteException e)
         {
-                System.out.println("La operación no se pudo completar, intente nuevamente...");
-                System.out.println("Excepcion generada: " + e.getMessage());
+            System.out.println("La operación no se pudo completar, intente nuevamente...");
+            System.out.println("Excepcion generada: " + e.getMessage());
         }	
     }
     

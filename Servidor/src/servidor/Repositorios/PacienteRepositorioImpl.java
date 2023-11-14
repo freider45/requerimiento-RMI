@@ -3,41 +3,27 @@ package servidor.Repositorios;
 
 import java.util.LinkedList;
 import java.util.List;
+import servidor.DTO.SensoresDTO;
 import servidor.DTO.UsuarioDTO;
 
 public class PacienteRepositorioImpl implements PacienteRepositoryInt {
 
-    private LinkedList<UsuarioDTO> pacientes;
+    private LinkedList<SensoresDTO> objSensores;
     
     public PacienteRepositorioImpl(){
-        pacientes=new LinkedList();
+        objSensores=new LinkedList();
     }
+    /*
     @Override
     public UsuarioDTO registrarPaciente(UsuarioDTO objPaciente) {
         this.pacientes.add(objPaciente);
         return objPaciente;
-    }
+    }*/
 
     @Override
-    public int consultarCantidadPacientes() {
-        return this.pacientes.size(); 
+    public void almacenarDatosAlerta(SensoresDTO objSensoresDTO) {
+        //TODO alamcenar la informacion cuando se genera una alerta
+        //: No de habitación, Nombres y apellidos del paciente, 
+        //Fecha de la alerta, Hora de alerta y Puntuación.
     }
-
-    @Override
-    public UsuarioDTO consultarPaciente(int noHabitacion) {
-        UsuarioDTO objRespuesta=null;
-        for(UsuarioDTO paciente :pacientes){
-            if(paciente.getNoHabitacion() == noHabitacion){
-                objRespuesta=paciente;
-                break;
-            }
-        }
-        return objRespuesta;
-    }
-
-    @Override
-    public List<UsuarioDTO> listarPacientes() {
-        return this.pacientes;
-    }
-    
 }
