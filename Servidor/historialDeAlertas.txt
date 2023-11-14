@@ -1,0 +1,132 @@
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:15:34
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:15:42
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:15:50
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:15:58
+Puntuación: 6
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:06
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:14
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:22
+Puntuación: 3
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:30
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:38
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:46
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:16:54
+Puntuación: 6
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:02
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:10
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:18
+Puntuación: 3
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:26
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:34
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:42
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:50
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:17:58
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:06
+Puntuación: 3
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:14
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:22
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:30
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:38
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:46
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:18:54
+Puntuación: 3
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:02
+Puntuación: 6
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:10
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:18
+Puntuación: 4
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:26
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:34
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:42
+Puntuación: 5
+No de habitación: 222
+Nombres y apellidos del paciente: as as
+Fecha de la alerta: 2023-11-14 00:19:50
+Puntuación: 3

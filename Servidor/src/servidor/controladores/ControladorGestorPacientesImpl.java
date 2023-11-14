@@ -5,7 +5,12 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 import servidor.DTO.SensoresDTO;
 import servidor.DTO.UsuarioDTO;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.io.PrintWriter;
+import java.io.IOException;
 import servidor.Repositorios.PacienteRepositoryInt;
+import servidor.utilidades.RangosSalud;
 
 public class ControladorGestorPacientesImpl 
         extends UnicastRemoteObject 
@@ -21,7 +26,7 @@ public class ControladorGestorPacientesImpl
         this.objRepositorio=objRepositorio;
         this.objRemotoGestionEquiposNotificacion = objRemotoGestionEquiposNotificacion;
     }
-  
+
     @Override
     public boolean enviarLecturaSensores(SensoresDTO objSensoresDTO) throws RemoteException{
         System.out.println("\nLecturas de sensores recibidas..\n");
@@ -31,6 +36,12 @@ public class ControladorGestorPacientesImpl
                 objSensoresDTO.getTensionArterialDiastolica());
         System.out.println("\nSaturación de oxígeno: "+objSensoresDTO.getSaturacionOxigeno());
         System.out.println("\nTempertatura: "+objSensoresDTO.getTemperatura());
+        
+       RangosSalud.tomarAccionesPuntuacion(objSensoresDTO);
+            
+        
+        
+        
         return true;
     }
 
